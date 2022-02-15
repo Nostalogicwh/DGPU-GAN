@@ -40,16 +40,16 @@ class Discriminator(object):
                 )
                 out_feat = tf.concat([l1_features, l0_features], axis=-1)
 
-                l2_features = ops.conv1d(
-                    out_feat, comp, 1,
-                    padding='VALID', scope='layer2_prep', is_training=self.is_training, bn=use_bn,
-                    bn_decay=bn_decay
-                )
-                l2_features, l2_idx = ops.dense_conv1(
-                    l2_features, growth_rate=growth_rate, n=dense_n, k=knn,
-                    scope="layer2", is_training=self.is_training, bn=use_bn, bn_decay=bn_decay
-                )
-                out_feat = tf.concat([l2_features, out_feat], axis=-1)
+                # l2_features = ops.conv1d(
+                #     out_feat, comp, 1,
+                #     padding='VALID', scope='layer2_prep', is_training=self.is_training, bn=use_bn,
+                #     bn_decay=bn_decay
+                # )
+                # l2_features, l2_idx = ops.dense_conv1(
+                #     l2_features, growth_rate=growth_rate, n=dense_n, k=knn,
+                #     scope="layer2", is_training=self.is_training, bn=use_bn, bn_decay=bn_decay
+                # )
+                # out_feat = tf.concat([l2_features, out_feat], axis=-1)
                 out_feat = tf.expand_dims(out_feat, axis=2)
 
                 features = ops.attention_unit(out_feat, is_training=self.is_training)
