@@ -56,5 +56,6 @@ parse.add_argument('--uniform_w', default=10.0, type=float, help="uniform_weight
 # gan损失权重
 parse.add_argument('--gan_w', default=0.5, type=float, help="gan_weight")
 parse.add_argument('--gen_update', default=2, type=int, help="gen_update")
+parse.add_argument('--gpu', default=0, type=int, help='choose_gpu')
 
 FLAGS = parse.parse_args()

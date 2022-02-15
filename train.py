@@ -9,6 +9,7 @@ pp = pprint.PrettyPrinter()
 
 
 def run():
+    os.environ['CUDA_VISIBLE_DEVICES'] = FLAGS.gpu
     if FLAGS.phase == 'train':
         FLAGS.train_file = os.path.join(FLAGS.data_dir, 'train/DGPU_GAN.h5')
         print('train_file:', FLAGS.train_file)
