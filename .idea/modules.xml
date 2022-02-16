@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../3PU/.idea/3PU.iml" filepath="$PROJECT_DIR$/../3PU/.idea/3PU.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Dis-PU/.idea/Dis-PU.iml" filepath="$PROJECT_DIR$/../Dis-PU/.idea/Dis-PU.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MyPU.iml" filepath="$PROJECT_DIR$/.idea/MyPU.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../PU-GAN-master/.idea/PU-GAN-master.iml" filepath="$PROJECT_DIR$/../PU-GAN-master/.idea/PU-GAN-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dgcnn/tensorflow/.idea/tensorflow.iml" filepath="$PROJECT_DIR$/../dgcnn/tensorflow/.idea/tensorflow.iml" />
+    </modules>
+  </component>
+</project>
