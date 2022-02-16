@@ -39,9 +39,12 @@ class Discriminator(object):
                     scope='layer1', is_training=self.is_training, bn=use_bn, bn_decay=bn_decay
                 )
                 out_feat = tf.concat([l1_features, l0_features], axis=-1)
+
+                out_feat = tf.expand_dims(inputs, axis=2)
                 features_gloabl = tf.reduce_max(out_feat, axis=1, keep_dims=True, name='maxpool_0')
                 features = tf.concat(
-                    [out_feat, tf.tile(features_gloabl, [1, tf.shape(inputs)[1], 1, 1])]
+                    [out_feat, tf.tile(features_gloabl, [1, tf.shape(inputs)[1], 1, 1])],
+                    axis=-1
                 )
 
                 # l2_features = ops.conv1d(
