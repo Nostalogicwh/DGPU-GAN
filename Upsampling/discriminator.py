@@ -40,7 +40,7 @@ class Discriminator(object):
                 )
                 out_feat = tf.concat([l1_features, l0_features], axis=-1)
 
-                out_feat = tf.expand_dims(inputs, axis=2)
+                out_feat = tf.expand_dims(out_feat, axis=2)
                 features_gloabl = tf.reduce_max(out_feat, axis=1, keep_dims=True, name='maxpool_0')
                 features = tf.concat(
                     [out_feat, tf.tile(features_gloabl, [1, tf.shape(inputs)[1], 1, 1])],
