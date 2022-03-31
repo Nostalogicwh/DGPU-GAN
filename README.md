@@ -1,1 +1,1 @@
-# DGPU-GAN
+# GPU-GAN
